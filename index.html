@@ -1,0 +1,57 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="./styles.css">
+
+    <!-- Add the jsPDF and html2canvas CDN links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Dynamic Resume Builder</h1>
+        <form id="resumeForm">
+            <!-- Form fields go here -->
+            <div class="form-section">
+                <h2>Input Resume Information </h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Your Name">
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Your Email">
+    
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" placeholder="Your Phone Number">
+               
+                <label for="education">Education:</label>
+                <textarea id="education" placeholder="Education"></textarea>
+    
+                <label for="experience">Experience:</label>
+                <textarea id="experience" placeholder="Your Experience"></textarea>
+                <label for="skills">Skills:</label>
+                <textarea id="skills" placeholder="Your Skills"></textarea>
+    
+                <button id="generate">Generate Resume</button>
+            </div>
+        </form>
+
+        <button id="generateResume">Generate Resume PDF</button>
+
+        <div id="generatedLink" class="hidden">
+            <h2>Your Resume Link:</h2>
+            <a id="resumeLink" href="#">Shareable Resume Link</a>
+        </div>
+
+        <div id="resumePreview" class="hidden">
+            <h2>Resume Preview</h2>
+            <div id="resumeContent"></div>
+        </div>
+
+    </div>
+
+    <script src="./script.js" type="module"></script>
+</body>
+</html>
